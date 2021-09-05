@@ -6,6 +6,8 @@ This is a program that helps a person manually keep track of their personal fina
 
 This program is compiled with Java 8 for a Windows 10 computer.
 
+The JavaDocs are hosted [here](https://kevinm-code.github.io/PersonalFinancialManagementSystem/).
+
 To run the program:
 
 1. Download and unzip the `ProgrammingCapstoneApp` folder.
