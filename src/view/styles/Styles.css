@@ -1,0 +1,137 @@
+
+/* css variables*/
+* {
+    -fx-primary: #333333;
+    -fx-secondary: #FFFF8D;
+    -fx-primarytext: #B2B2B2;
+    -fx-secondarytext: #FFFFFF;
+    -fx-outflowtext: #ff4f4f;
+    -fx-inflowtext: #009900;
+    -fx-hamburgerBackground: #FFFFFF;
+    -fx-drawerBorder: #00909f;
+    
+}
+.about-style {    
+    -fx-font-size: 17;
+}
+
+.about-pane {
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 20px;
+}
+
+.hamburger-styles {
+    -fx-background-color: -fx-hamburgerBackground;
+    -fx-border-color: -fx-hamburgerBackground;
+}
+
+.google-border {
+    -fx-border-color: -fx-drawerBorder;
+}
+
+.buttonMargin {
+    -fx-padding: 10px;
+    -fx-border-insets: 30px;
+    -fx-background-insets: 5px;
+}
+
+/* Pie Chart design elements */
+
+.chart-title {
+    -fx-text-fill: -fx-secondarytext;
+    -fx-font-size: 1.6em;
+}
+
+.chart-pie-label {
+    -fx-fill: -fx-secondarytext;
+    -fx-font-size: 1em;
+}
+
+.standard-dark-background {
+    -fx-background-color: -fx-primary;
+}
+
+.secondary-color {
+    -fx-background-color: -fx-secondary;
+}
+
+.outflow-text-color {
+    -fx-text-fill: -fx-outflowtext;
+}
+
+.inflow-text-color {
+    -fx-text-fill: -fx-inflowtext;
+}
+
+.Button {
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.glyph-icon {
+    -fx-fill: -fx-primarytext;
+}
+
+.text-field {
+    -fx-text-fill: -fx-primarytext;
+    -fx-font-size: 13pt;
+    -jfx-focus-color: -fx-secondary;
+}
+
+.Button:hover {
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-secondary;
+    -fx-border-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+/* TabPane Styling*/
+
+.tab-label {
+    -fx-background-color: -fx-primary;
+    -fx-pref-width: 180;
+    -fx-pref-height: 50;
+
+}
+
+.tab-header-background {
+    -fx-background-color: -fx-primary;
+}
+
+.menu-bar {
+    -fx-base: -fx-primary;
+    -fx-background-color: -fx-primary;
+
+}
+
+.context-menu {
+    -fx-background-color: -fx-primary;
+}
+
+.menu .label {
+    -fx-text-fill: -fx-secondarytext;
+}
+
+.title-label {
+    -fx-text-fill: white;
+}
+
+.yellow-text-fill {
+    -fx-text-fill: -fx-secondary;
+}
+
+#mainAnchorPane {
+    -fx-background-color: -fx-primary;
+}
+
+.mainFxmlClass {
+    -fx-background-color: #2d2d2d;
+}

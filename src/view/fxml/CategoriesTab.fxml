@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<SplitPane dividerPositions="0.45" orientation="VERTICAL" prefHeight="617.0" prefWidth="748.0"
+           stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.181"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CategoriesTabController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0"
+                    styleClass="standard-dark-background">
+            <children>
+                <TreeTableView fx:id="categoriesTreeTableView" onMouseClicked="#getAccAndCatFillFormOnMouseClick"
+                               prefHeight="92.0" prefWidth="337.0" AnchorPane.bottomAnchor="0.0"
+                               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                    <columns>
+                        <TreeTableColumn fx:id="accByCat" prefWidth="200.0" text="Accounts By Category"/>
+                        <TreeTableColumn fx:id="accountBal" maxWidth="2500.0" prefWidth="100.0" text="Account Balance"/>
+                    </columns>
+                </TreeTableView>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="100.0" minWidth="140.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <JFXTabPane fx:id="categoryOptionsTabPane" minHeight="253.0" prefHeight="253.0" prefWidth="222.0"
+                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                            AnchorPane.topAnchor="0.0">
+                    <tabs>
+                        <Tab styleClass="tab-label" text="New Category">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="749.0"
+                                            styleClass="standard-dark-background">
+                                    <children>
+                                        <GridPane layoutY="38.0" prefHeight="210.0" prefWidth="746.0"
+                                                  AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="0.0"
+                                                  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="177.0"
+                                                                   minWidth="10.0" prefWidth="168.0"/>
+                                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0"
+                                                                   prefWidth="169.0"/>
+                                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0"
+                                                                   prefWidth="156.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="197.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+                                            <children>
+                                                <Label text="Account Assigned:  " textFill="WHITE"
+                                                       GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <ComboBox fx:id="newAccAssignToCatComboBox" layoutX="503.0"
+                                                          layoutY="173.0" prefHeight="25.0" prefWidth="204.0"
+                                                          GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                                                <JFXTextField fx:id="newCatTextField" labelFloat="true" layoutX="503.0"
+                                                              layoutY="101.0"
+                                                              onMouseClicked="#newCatTextFieldOnMouseClick"
+                                                              promptText="Category Name" unFocusColor="#b9b7b7"
+                                                              GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                                <Label layoutX="375.0" layoutY="110.0" text="Category Name:  "
+                                                       textFill="WHITE" GridPane.rowIndex="1">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0"
+                                                       prefWidth="354.0" text="Assign Another Account To A Category"
+                                                       textAlignment="CENTER" textFill="WHITE" GridPane.columnSpan="4"
+                                                       GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                                    <font>
+                                                        <Font size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="397.0" layoutY="34.0" text="Account Assigned:  "
+                                                       textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <ComboBox fx:id="newAddAccToCatComboBox" layoutX="544.0" layoutY="31.0"
+                                                          prefHeight="25.0" prefWidth="203.0" GridPane.columnIndex="3"
+                                                          GridPane.rowIndex="3"/>
+                                                <Label layoutX="59.0" layoutY="34.0" text="Category Name:  "
+                                                       textFill="WHITE" GridPane.rowIndex="3">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="newCatNameLabel" layoutX="59.0" layoutY="166.0"
+                                                       styleClass="yellow-text-fill" text="Category Name  "
+                                                       textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="errNewCategoryNameLabel" layoutX="187.0" layoutY="184.0"
+                                                       textFill="#ff4242" GridPane.columnIndex="1"
+                                                       GridPane.columnSpan="2">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </GridPane>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="12.0"
+                                               prefHeight="27.0" prefWidth="438.0"
+                                               text="Enter A New Category And Assign It To An Account "
+                                               textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0"
+                                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <JFXButton fx:id="newCatWithAssignAccountButton" disable="true" layoutX="442.0"
+                                                   layoutY="195.0" onAction="#newCategoryOnAction" prefHeight="27.0"
+                                                   prefWidth="234.0" styleClass="Button"
+                                                   text="Add Category with Present Account"
+                                                   AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="14.0"/>
+                                        <JFXButton fx:id="newAccountToCategoryButton" disable="true" layoutX="14.0"
+                                                   layoutY="245.0" onAction="#assignNewAccountToCatOnAction"
+                                                   prefHeight="27.0" prefWidth="234.0" styleClass="Button"
+                                                   text="Add Account to Category Selected"
+                                                   AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0"/>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="editCategoryTab" styleClass="tab-label" text="Edit/Del Category">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="749.0"
+                                            styleClass="standard-dark-background">
+                                    <children>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString=""
+                                               layoutX="210.0" prefHeight="27.0" prefWidth="480.0"
+                                               text="Select An Account Above And Assign A Different Category To It"
+                                               textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0"
+                                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <GridPane layoutX="10.0" layoutY="79.0" prefHeight="164.0" prefWidth="670.0"
+                                                  AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+                                                  AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="35.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="120.0"
+                                                                   prefWidth="120.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0"
+                                                                   prefWidth="200.0"/>
+                                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0"
+                                                                   prefWidth="204.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="162.0"
+                                                                   prefWidth="170.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0"
+                                                                vgrow="SOMETIMES"/>
+                                                <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="52.0"
+                                                                vgrow="SOMETIMES"/>
+                                                <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="48.0"
+                                                                vgrow="SOMETIMES"/>
+                                                <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="41.0"
+                                                                vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+                                            <children>
+                                                <Label alignment="CENTER_RIGHT" text="Account Name:  " textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label text="Category Assigned:  " textFill="WHITE"
+                                                       GridPane.columnIndex="2">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <ComboBox fx:id="editCatAssignToAccComboBox" prefHeight="25.0"
+                                                          prefWidth="186.0" GridPane.columnIndex="3"/>
+                                                <JFXButton fx:id="editAccAssignedButton" disable="true"
+                                                           onAction="#editAccountAssignedToCatOnAction"
+                                                           prefHeight="27.0" prefWidth="202.0" styleClass="Button"
+                                                           text="Edit Category Assigned to Account"
+                                                           GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                                                <Label text="Category Name:  " textFill="WHITE" GridPane.rowIndex="2">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <JFXTextField fx:id="editCatNameTextField" labelFloat="true"
+                                                              promptText="Category Name" unFocusColor="#b9b7b7"
+                                                              GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                                                <JFXButton fx:id="editNameOfCatButton" disable="true"
+                                                           onAction="#editNameOfSelectedCatOnAction" prefHeight="27.0"
+                                                           prefWidth="202.0" styleClass="Button"
+                                                           text="Edit Name Of Category Selected"
+                                                           GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                                                <JFXButton fx:id="delCatSelectedButton" disable="true" layoutX="371.0"
+                                                           layoutY="69.0" onAction="#deleteCategorySelectedOnAction"
+                                                           prefHeight="27.0" prefWidth="202.0" styleClass="Button"
+                                                           text="Delete Category Selected" GridPane.columnIndex="3"
+                                                           GridPane.rowIndex="3"/>
+                                                <Label fx:id="accountSelectedLabel" alignment="CENTER_RIGHT"
+                                                       layoutX="40.0" layoutY="25.0" styleClass="yellow-text-fill"
+                                                       textFill="WHITE" GridPane.columnIndex="1">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <JFXButton fx:id="delAccFromCatButton" disable="true" layoutX="376.0"
+                                                           layoutY="66.0" onAction="#delAccFromCatOnAction"
+                                                           prefHeight="27.0" prefWidth="202.0" styleClass="Button"
+                                                           text="Delete Account From Category" GridPane.columnIndex="1"
+                                                           GridPane.rowIndex="1"/>
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </JFXTabPane>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>

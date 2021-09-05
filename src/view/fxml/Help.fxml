@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.URL?>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="530.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.181"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelpController">
+    <stylesheets>
+        <URL value="@/view/styles/Styles.css"/>
+    </stylesheets>
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="standard-dark-background"
+                    stylesheets="@../styles/Styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <JFXHamburger fx:id="hamburger" layoutX="482.0" layoutY="29.0" styleClass="hamburger-styles"/>
+                <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="400.0" prefWidth="190.0"
+                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <VBox fx:id="box" alignment="TOP_CENTER" prefHeight="400.0" prefWidth="190.0">
+                            <children>
+                                <ImageView fitHeight="116.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/DrawerPic.png"/>
+                                    </image>
+                                </ImageView>
+                                <JFXButton fx:id="accountsHelpButton" accessibleText="accountTabHelpButton"
+                                           alignment="CENTER" layoutX="45.0" layoutY="120.0" prefHeight="99.0"
+                                           prefWidth="188.0" text="Accounts Tab Help">
+                                    <styleClass>
+                                        <String fx:value="Button"/>
+                                        <String fx:value="buttonMargin"/>
+                                    </styleClass>
+                                </JFXButton>
+                                <JFXButton fx:id="catHelpButton" accessibleText="categoriesTabHelpButton"
+                                           alignment="CENTER" layoutX="45.0" layoutY="161.0" prefHeight="99.0"
+                                           prefWidth="199.0" text="Categories Tab Help">
+                                    <styleClass>
+                                        <String fx:value="Button"/>
+                                        <String fx:value="buttonMargin"/>
+                                    </styleClass>
+                                </JFXButton>
+                                <JFXButton fx:id="ledgerHelpButton" accessibleText="ledgerTabHelpButton"
+                                           alignment="CENTER" layoutX="45.0" layoutY="202.0" prefHeight="99.0"
+                                           prefWidth="220.0" text="Ledger Tab Help">
+                                    <styleClass>
+                                        <String fx:value="Button"/>
+                                        <String fx:value="buttonMargin"/>
+                                    </styleClass>
+                                </JFXButton>
+                            </children>
+                            <styleClass>
+                                <String fx:value="standard-dark-background"/>
+                                <String fx:value="google-border"/>
+                            </styleClass>
+                        </VBox>
+                    </children>
+                </JFXDrawer>
+                <Label layoutX="402.0" layoutY="6.0" prefHeight="17.0" prefWidth="192.0"
+                       text="Click to Open Help Options Drawer" textFill="WHITE"/>
+                <ScrollPane fx:id="helpScrollPane" layoutX="230.0" layoutY="119.0" prefHeight="413.0" prefWidth="600.0"
+                            visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="792.0" prefWidth="592.0"
+                                    styleClass="standard-dark-background">
+                            <children>
+                                <Pane fx:id="accTabHelpPane" prefHeight="490.0" prefWidth="598.0" visible="false"
+                                      AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label layoutX="30.0" layoutY="24.0" prefHeight="35.0" prefWidth="210.0"
+                                               text="Accounts Tab Help" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="24.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="47.0" layoutY="59.0" prefHeight="44.0" prefWidth="520.0"
+                                               text="To start the Personal Financial Management System, click the blue button below the accounts table."
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="35.0" layoutY="72.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="76.0" layoutY="131.0" prefHeight="63.0" prefWidth="493.0"
+                                               text="To insert an account, fill in the fields below the accounts table and press the Add Account button. You will notice the account will show up on the accounts table above the fields."
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="64.0" layoutY="144.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="30.0" layoutY="96.0" prefHeight="35.0" prefWidth="210.0"
+                                               text="Insert an Account" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="76.0" layoutY="194.0" prefHeight="43.0" prefWidth="493.0"
+                                               text="If you have a current credit card or bill balance that you owe on, please enter the starting balance that you owe as a NEGATIVE number. "
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="64.0" layoutY="207.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="75.0" layoutY="286.0" prefHeight="63.0" prefWidth="493.0"
+                                               text="To edit an account, click on an account that you want to edit. The text fields will populate with the information from the account you clicked. Change the information you wish to change and press the Edit Account Button."
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="63.0" layoutY="299.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="29.0" layoutY="245.0" prefHeight="35.0" prefWidth="160.0"
+                                               text="Edit an Account" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="76.0" layoutY="390.0" prefHeight="44.0" prefWidth="493.0"
+                                               text="To delete an account, click on an account that you want to delete and press the Delete Account Button."
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="64.0" layoutY="403.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="30.0" layoutY="349.0" prefHeight="35.0" prefWidth="160.0"
+                                               text="Delete an Account" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="60.0" layoutY="446.0" prefHeight="22.0" prefWidth="60.0"
+                                               text="Warning:" textFill="#ff3a3a" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="58.0" layoutY="457.0" prefHeight="72.0" prefWidth="511.0"
+                                               text="If you delete an account (Credit Card) that was used by a transaction to purchase something or transfer out of (checking), those transactions will be deleted with the account!!"
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="catTabHelpPane" prefHeight="786.0" prefWidth="598.0" visible="false"
+                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label layoutX="30.0" layoutY="24.0" prefHeight="35.0" prefWidth="229.0"
+                                               text="Category Tab Help" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="24.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="76.0" layoutY="94.0" prefHeight="126.0" prefWidth="493.0"
+                                               text="To insert a category, fill in the &quot;Category Name&quot; text field with the new name of your category.  In the selection box adjacent to the text field is where you will select an account you have already created to attach it to the category. Once both fields are selected and filled out press the &quot;Add Category with Present Account&quot; button. You will notice the category and the account underneath the category on the category table above the fields."
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="64.0" layoutY="107.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="30.0" layoutY="59.0" prefHeight="35.0" prefWidth="508.0"
+                                               text="Create A New Category And Assign A Current Account To It"
+                                               textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="76.0" layoutY="255.0" prefHeight="84.0" prefWidth="493.0"
+                                               text="To edit a category name, click on a category of the name you want to edit. The bottom field in the &quot;Edit/Del Category&quot; Tab will populate with the current name assigned to the category.  Change the name of the category and press the &quot;Edit Name Of Category Selected&quot; Button."
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="64.0" layoutY="268.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="30.0" layoutY="220.0" prefHeight="35.0" prefWidth="203.0"
+                                               text="Edit The Category Name" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="76.0" layoutY="374.0" prefHeight="126.0" prefWidth="493.0"
+                                               text="To assign another account to a current category, click on a category name you would like to add another account to. The bottom field in the &quot;New Category&quot; Tab will populate with the name of the category clicked. Select another account from the selections to the right of the name of the category you selected.  Once you have selected the account press the &quot;Add Account To Category Selected&quot; Button."
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="64.0" layoutY="387.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="30.0" layoutY="339.0" prefHeight="35.0" prefWidth="394.0"
+                                               text="Assign Another Account To A Current Category" textFill="WHITE"
+                                               underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="76.0" layoutY="535.0" prefHeight="126.0" prefWidth="493.0"
+                                               text="To change the category an account is assigned to, click on an account in the table you would like to change to another category. The top fields in the &quot;Edit/Del Category&quot; Tab will populate with the name of the account and the category it is currently assigned to. Select another category from the selections to the right of the name of the account.  Once you have selected the category press the &quot;Edit Category Assigned To Account&quot; Button."
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="64.0" layoutY="548.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="30.0" layoutY="500.0" prefHeight="35.0" prefWidth="394.0"
+                                               text="Change The Category An Account Is Assigned To" textFill="WHITE"
+                                               underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="ledgerTabHelpPane" layoutX="10.0" layoutY="10.0" prefHeight="786.0"
+                                      prefWidth="598.0" visible="false" AnchorPane.bottomAnchor="0.0"
+                                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="2.0"
+                                      AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label layoutX="30.0" layoutY="24.0" prefHeight="35.0" prefWidth="229.0"
+                                               text="Ledger Tab Help" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="24.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="76.0" layoutY="94.0" prefHeight="185.0" prefWidth="493.0"
+                                               text="To create a new transaction, select an account of which the money is coming from (e.g. Checking, Savings or Credit Card), and set it in the selection control just below the main tabs.  Once you have selected the account the money is coming from, fill out the rest of the form below the table in the &quot;New Transactions&quot; Tab. Once you have selected the account the money is going to and filled out the rest of the form click the &quot;Add Transaction&quot; Button. You will see a credit transaction in the credit transaction table under the account you are currently in and a debit transaction in the account the money is being recieved. You will also notice the the account totals will change accordingly."
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="64.0" layoutY="107.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="30.0" layoutY="59.0" prefHeight="35.0" prefWidth="508.0"
+                                               text="Create A New Transaction" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="72.0" layoutY="464.0" prefHeight="144.0" prefWidth="493.0"
+                                               text="Select a transaction you wish to edit. Once the transaction is selected the system will change to the &quot;Edit/Del Transactions&quot; Tab and the fields will populate with the information from the transaction. The fields available to edit are transaction date, description, and amount. Once you make the edits you like press the &quot;Edit Transaction&quot; button. If you make a change in the amount of the transaction the system will make the proper changes to the balances of the accounts accordingly."
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="60.0" layoutY="477.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="26.0" layoutY="429.0" prefHeight="35.0" prefWidth="203.0"
+                                               text="Edit A Transaction" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="72.0" layoutY="652.0" prefHeight="45.0" prefWidth="493.0"
+                                               text="Select a transaction you wish to delete and press the &quot;Delete Transaction&quot; button "
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="60.0" layoutY="665.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="26.0" layoutY="617.0" prefHeight="35.0" prefWidth="203.0"
+                                               text="Delete A Transaction" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="72.0" layoutY="334.0" prefHeight="85.0" prefWidth="493.0"
+                                               text="Above the tables next to the &quot;Select An Account:&quot; lable choose the billing account that you wish to assign. Below in the &quot;New Transaction&quot; Tab select &quot;Bill Amount&quot; next to the &quot;Account To:&quot; label. Fill out the rest of the transaction form according to the bill amount and select the &quot;Add Transaction&quot; button"
+                                               textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Circle fill="DODGERBLUE" layoutX="60.0" layoutY="347.0" radius="5.0"
+                                                stroke="BLACK" strokeType="INSIDE"/>
+                                        <Label layoutX="30.0" layoutY="291.0" prefHeight="35.0" prefWidth="508.0"
+                                               text="Insert a Bill" textFill="WHITE" underline="true">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

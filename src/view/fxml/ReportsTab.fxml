@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0"
+            prefWidth="727.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.181"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsTabController">
+    <children>
+        <PieChart fx:id="pieChart" layoutX="98.0" layoutY="14.0" prefHeight="169.0" prefWidth="520.0"
+                  AnchorPane.bottomAnchor="217.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0"
+                  AnchorPane.topAnchor="14.0"/>
+        <GridPane layoutX="4.0" layoutY="483.0" prefHeight="91.0" prefWidth="717.0" AnchorPane.bottomAnchor="21.0"
+                  AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="483.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="50.0" prefWidth="60.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="133.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="50.0" prefWidth="60.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="133.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="100.0" prefWidth="120.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <JFXButton contentDisplay="CENTER" onAction="#renderPieChartOnAction" styleClass="Button"
+                           text="Pie Chart of Bill Payments" GridPane.columnIndex="4"/>
+                <JFXButton alignment="CENTER_RIGHT" layoutX="10.0" layoutY="42.0" onAction="#showReportOnAction"
+                           styleClass="Button" text="Show Report" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+                <Label text="To Date:  " textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Serif Regular" size="18.0"/>
+                    </font>
+                </Label>
+                <Label text="From Date:" textFill="WHITE" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Serif Regular" size="18.0"/>
+                    </font>
+                </Label>
+                <JFXDatePicker fx:id="reportFromDatePicker" onAction="#enableToDatePickerOnAction"
+                               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <JFXDatePicker fx:id="reportToDatePicker" disable="true" GridPane.columnIndex="3"
+                               GridPane.rowIndex="1"/>
+                <Label fx:id="errFromDateLabel" textFill="#f23030" GridPane.columnSpan="2">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="errToDateLabel" layoutX="149.0" layoutY="20.0" textFill="#f23030" GridPane.columnIndex="2"
+                       GridPane.columnSpan="2">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

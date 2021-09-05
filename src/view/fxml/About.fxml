@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass"
+            xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.AboutController">
+    <stylesheets>
+        <URL value="@/view/styles/Styles.css"/>
+    </stylesheets>
+    <children>
+        <Pane layoutX="191.0" layoutY="44.0" prefHeight="200.0" prefWidth="200.0" styleClass="standard-dark-background"
+              stylesheets="@../styles/Styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="58.0" layoutY="51.0" styleClass="about-style"
+                       text="About Personal Financial Management System " textFill="WHITE"/>
+                <Pane layoutX="58.0" layoutY="88.0" prefHeight="262.0" prefWidth="485.0" styleClass="about-pane">
+                    <children>
+                        <Label layoutX="14.0" layoutY="14.0" styleClass="about-style"
+                               text="Personal Financial Management System" textFill="WHITE"/>
+                        <Label layoutX="14.0" layoutY="59.0" styleClass="about-style" text="Developed by Kevin Mock"
+                               textFill="WHITE"/>
+                        <Hyperlink fx:id="imgLinkToLicense" layoutX="176.0" layoutY="153.0"
+                                   onMouseClicked="#displayLicenseOnImgMouseClick">
+                            <graphic>
+                                <ImageView fitHeight="87.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/gplv3.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Hyperlink>
+                        <Hyperlink fx:id="textLinkToLicense" layoutX="14.0" layoutY="103.0"
+                                   onMouseClicked="#displayLicenseOnTextMouseClick"
+                                   text="Distributed under the GNU General Public License version 3">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Hyperlink>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
